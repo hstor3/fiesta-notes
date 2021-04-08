@@ -3,6 +3,8 @@ let noteText;
 let saveNoteBtn;
 let newNoteBtn;
 let noteList;
+let fs = require('fs');
+const http = require('http');
 
 if (window.location.pathname === '/notes') {
   noteTitle = document.querySelector('.note-title');
