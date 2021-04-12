@@ -19,13 +19,6 @@ router.post("/notes", (req, res) => {
             notes.push(req.body);
             return res.json(false);
         }
-        // let note = req.params.notes;
-
-        // for (let i = 0; i < notes.length; i++) {
-        //     if (note === notes[i]) {
-        //         return res.json(notes[i])
-        //     }
-        // }
     }).catch(err => {
         res.status(500).json(err)
     })
@@ -39,15 +32,6 @@ router.delete("/notes/clear", (req, res) => {
             return res.json(notes[i]--)
         }
     }
-    // Notes.getNotes().then(notes => {
-    //    return res.json(notes--)
-
-    // }).catch(err => {
-    // res.status(500).json(err)
-    // })
-    // notes.length = 0;
-
-    // res.json({ ok: true });
 })
 
 module.exports = router;

@@ -31,12 +31,7 @@ class Notes {
         })
     }
 
-    
-    // add note method
-    // this.getNote(note)
-    // create note object
     deleteNotes(notes) {
-        // return notes--
         console.log(notes)
         return this.getNotes().then(notes => {
             note['id'] = uniqid();
@@ -44,8 +39,6 @@ class Notes {
             return this.write(notes)
         });
     }
-
-    //delete method uses filter to create a new array minus the one with the right id
 }
 
 module.exports = new Notes();
